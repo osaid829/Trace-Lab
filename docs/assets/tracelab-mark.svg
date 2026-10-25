@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 288" role="img" aria-labelledby="title desc">
+  <title id="title">TraceLab</title>
+  <desc id="desc">TraceLab local-first API debugging workbench logo.</desc>
+  <defs>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9cc7ff"/>
+      <stop offset="1" stop-color="#68ddb4"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="960" height="288" rx="32" fill="#0d1015"/>
+  <rect x="1.5" y="1.5" width="957" height="285" rx="30.5" fill="none" stroke="#273343" stroke-width="3"/>
+  <g transform="translate(64 56)">
+    <rect width="176" height="176" rx="34" fill="#152235" stroke="#3f6792" stroke-width="3"/>
+    <path d="M39 47h98v23h-34v59H73V70H39z" fill="url(#accent)" filter="url(#glow)"/>
+    <path d="M32 133h112M32 145h76" stroke="#89a7c9" stroke-width="5" stroke-linecap="round" opacity=".72"/>
+    <circle cx="143" cy="145" r="7" fill="#68ddb4"/>
+  </g>
+  <g fill="#e7edf6" font-family="ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+    <text x="288" y="142" font-size="72" font-weight="700" letter-spacing="-3">TraceLab</text>
+    <text x="293" y="186" fill="#8fa0b6" font-size="20" font-weight="600" letter-spacing="6">LOCAL-FIRST API WORKBENCH</text>
+  </g>
+</svg>

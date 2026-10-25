@@ -1,0 +1,61 @@
+name: Bug report
+description: Report a reproducible problem in TraceLab.
+title: "bug: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve TraceLab. Please remove credentials, tokens, cookies, private URLs, and database files before submitting.
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      placeholder: 0.1.0 or abc1234
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Web workbench
+        - Local service
+        - Request execution
+        - Import/export
+        - Environment variables
+        - Build or tooling
+        - Documentation
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      description: Include the smallest safe request or workflow that shows the problem.
+      placeholder: |
+        1. Start TraceLab with ...
+        2. Open ...
+        3. Enter ...
+        4. Observe ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Include OS, Node.js version, browser, and relevant non-secret configuration.
+    validations:
+      required: true

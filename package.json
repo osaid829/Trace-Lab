@@ -1,0 +1,43 @@
+{
+  "name": "tracelab",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A local-first API debugging workbench for composing, executing, and inspecting HTTP requests.",
+  "license": "MIT",
+  "author": "TraceLab contributors",
+  "type": "module",
+  "keywords": [
+    "api-client",
+    "api-debugging",
+    "developer-tools",
+    "http",
+    "local-first",
+    "react",
+    "sqlite",
+    "typescript"
+  ],
+  "engines": {
+    "node": ">=22",
+    "npm": ">=10"
+  },
+  "workspaces": [
+    "packages/shared",
+    "apps/server",
+    "apps/web"
+  ],
+  "scripts": {
+    "dev": "concurrently -k -n server,web -c blue,cyan \"npm run dev --workspace @tracelab/server\" \"npm run dev --workspace @tracelab/web\"",
+    "build": "npm run build --workspace @tracelab/shared && npm run build --workspace @tracelab/server && npm run build --workspace @tracelab/web",
+    "typecheck": "npm run typecheck --workspace @tracelab/shared && npm run typecheck --workspace @tracelab/server && npm run typecheck --workspace @tracelab/web",
+    "lint": "eslint . --max-warnings 0",
+    "test": "npm run test --workspace @tracelab/shared && npm run test --workspace @tracelab/server && npm run test --workspace @tracelab/web",
+    "test:e2e": "npm run test:e2e --workspace @tracelab/web"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/node": "^24.10.1",
+    "concurrently": "^10.0.6",
+    "eslint": "^9.39.1",
+    "typescript": "^7.0.2"
+  }
+}

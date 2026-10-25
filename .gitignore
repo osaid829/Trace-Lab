@@ -1,0 +1,46 @@
+# Dependencies and package-manager output
+node_modules/
+.npm/
+
+# Build and bundler output
+dist/
+build/
+.vite/
+.cache/
+*.tsbuildinfo
+
+# Local app state and databases
+.data/
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+*.sqlite-shm
+*.sqlite-wal
+*.sqlite-journal
+
+# Local configuration and logs
+.env
+.env.*
+!.env.example
+*.log
+
+# Test and coverage artifacts
+coverage/
+playwright-report/
+test-results/
+
+# Local captures and archives. Keep docs assets publishable.
+*.webm
+*.png
+*.jpeg
+*.jpg
+*.zip
+!docs/assets/*.png
+!docs/assets/*.jpeg
+!docs/assets/*.jpg
+
+# OS metadata
+.DS_Store
+.DS_Store?
